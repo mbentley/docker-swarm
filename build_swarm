@@ -2,6 +2,14 @@
 
 set -e
 
+if [ -z ${GOPATH} ]
+then
+  echo "error: GOPATH not set"
+  exit 1
+fi
+
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+
 go clean -i -x github.com/docker/swarm
 go get -v -u github.com/docker/swarm
-cp $GOPATH/bin/swarm .
+cp ${GOPATH}/bin/swarm ${DIR}/.
