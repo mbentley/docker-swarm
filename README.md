@@ -5,7 +5,7 @@ docker image for swarm
 
 To build this image:
 
-1. Build `swarm` using the `build_swarm` script.  This will use the `golang:latest` docker image to perform the build and the resulting binary will be `bin/swarm`.
+1. Build `swarm` using the `build_swarm` script.  This will use the `golang:latest` docker image to perform the build and the resulting `swarm` binary will be in the `bin/` directory.
 
 2. Build the docker image: `docker build --rm -t mbentley/swarm .`
 
