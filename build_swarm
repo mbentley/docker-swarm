@@ -1,6 +1,8 @@
 #!/bin/bash
 
-set -e
+set -e -x
+
+pwd
 
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
@@ -10,10 +12,8 @@ then
 else
   if [ -f ${DIR}/bin/swarm ]
   then
-    #docker run -it --rm -v ${DIR}/bin:/go/bin golang rm -v /go/bin/swarm
     docker run -i --rm -v ${DIR}/bin:/go/bin golang rm -v /go/bin/swarm
   fi
 fi
 
-#docker run -it --rm -v ${DIR}/bin:/go/bin golang go get -v -u github.com/docker/swarm
 docker run -i --rm -v ${DIR}/bin:/go/bin golang go get -v -u github.com/docker/swarm
