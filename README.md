@@ -4,7 +4,9 @@ mbentley/swarm
 docker image for swarm
 
 To build this image:
+
 1. Build `swarm` using the `build_swarm` script (you must have `go` installed and your GOPATH set; see https://golang.org/doc/code.html#GOPATH)
+
 2. Build the docker image: `docker build --rm -t mbentley/swarm .`
 
 To pull this image:
